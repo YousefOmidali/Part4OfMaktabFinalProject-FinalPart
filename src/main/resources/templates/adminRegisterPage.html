@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Admin Registration</title>
+</head>
+<body>
+<div align="center">
+    <h2>Admin Registration</h2>
+    <form action="#" th:action="@{/users/saveAdmin}" th:object="${admin}" method="post">
+        <label>firstname: </label>
+        <input type="text" th:field="*{firstname}"/><br><br>
+        <label>lastname: </label>
+        <input type="text" th:field="*{lastname}"/><br><br>
+        <label>email: </label>
+        <input type="text" th:field="*{email}"/><br><br>
+        <label>username: </label>
+        <input type="text" th:field="*{username}"/><br><br>
+        <label>password: </label>
+        <input type="password" th:field="*{password}"/><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>

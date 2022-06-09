@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Users Search</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+<div align="center">
+    <h2>Result of Users search</h2>
+    <table>
+        <tr>
+            <th>SignUp Time</th>
+            <th>Role</th>
+        </tr>
+        <tr th:each="users : ${usersList}">
+            <td class="align-middle" th:text="${users.signUpTime}"></td>
+            <td class="align-middle" th:text="${users.rolesInEnum}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

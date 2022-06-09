@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Expert Search</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+<div align="center">
+    <h2>Orders of The Expert</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>SubService</th>
+            <th>MadeTime</th>
+            <th>suggested Price</th>
+            <th>work Description</th>
+            <th>work Date</th>
+            <th>work Address</th>
+        </tr>
+        <tr th:each="order : ${orders}">
+            <td class="align-middle" th:text="${order.id}"></td>
+            <td class="align-middle" th:text="${order.subService.description}"></td>
+            <td class="align-middle" th:text="${order.madeTime}"></td>
+            <td class="align-middle" th:text="${order.suggestedPrice}"></td>
+            <td class="align-middle" th:text="${order.workDescription}"></td>
+            <td class="align-middle" th:text="${order.workDate}"></td>
+            <td class="align-middle" th:text="${order.address}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

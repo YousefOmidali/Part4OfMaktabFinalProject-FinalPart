@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>suggestions Of An Order Result</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+<div align="center">
+    <h2>suggestions Of An Order Result</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>suggestedPrice</th>
+            <th>experts id</th>
+            <th>experts lastname</th>
+        </tr>
+        <tr th:each="suggestion : ${suggestionList}">
+            <td class="align-middle" th:text="${suggestion.id}"></td>
+            <td class="align-middle" th:text="${suggestion.suggestedPrice}"></td>
+            <td class="align-middle" th:text="${suggestion.users.id}"></td>
+            <td class="align-middle" th:text="${suggestion.users.lastname}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

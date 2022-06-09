@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Expert Menu</title>
+</head>
+<body>
+<div align="center">
+    <h2>Experts Menu</h2>
+    <a th:href="@{/subService/findAll}"> All subServices </a><br><br>
+    <a th:href="@{/Service/findAll}"> All Services </a><br><br>
+    <a th:href="@{/order/allOrdersAnExpertCanSee}"> All orders I can take (all orders of my subServices)</a><br><br>
+    <a th:href="@{/suggestion/save}"> New Suggestion </a><br><br>
+    <a th:href="@{/subService/takeASubService}">Add a subService to my List </a><br><br>
+    <a th:href="@{/order/finishedOrder}">finished order </a><br><br>
+    <a th:href="@{/logout}"> ****Logout**** </a><br><br>
+
+</div>
+</body>
+</html>

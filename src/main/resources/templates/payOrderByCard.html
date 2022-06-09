@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="refresh" content="600;url=http://localhost:8080/users/timesUp"/>
+    <meta charset="ISO-8859-1">
+    <title>Pay for Order</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<div align="center">
+    <h2>Pay for Order</h2>
+    <form action="#" th:action="@{/users/payOrderByCard}" th:object="${payForOrderByCard}" method="post">
+        <label>Your card number: </label>
+        <input type="number" th:field="*{card}"/><br><br>
+        <label>Your card Cvv2: </label>
+        <input type="number" th:field="*{cvv2}"/><br><br>
+        <label>Order Id: </label>
+        <input type="number" th:field="*{orderId}"/><br><br>
+        <label>Amount: </label>
+        <input type="number" th:field="*{amount}"/><br><br>
+        <label>Expert Id: </label>
+        <input type="number" th:field="*{expertId}"/><br><br>
+
+        <div class="g-recaptcha bg-info m-3 row justify-content-center"
+             th:data-sitekey="6LfS5kcgAAAAAA1si11AOYvxVeg4i4QanXo8s_k3">
+        </div>
+        <button type="submit">Pay</button>
+    </form>
+    <h1 id="demo"></h1>
+</div>
+<!--${@environment.getProperty('recaptcha.key')}-->
+<script type="text/javascript">
+    var onloadCallback = function () {
+        alert("grecaptcha is ready!");
+    };
+</script>
+<script>
+    const myTimeout = setTimeout(myGreeting, 560000);
+
+    function myGreeting() {
+        document.getElementById("demo").innerHTML = "Time's Up        Hary Up!!"
+    }
+</script>
+</body>
+</html>

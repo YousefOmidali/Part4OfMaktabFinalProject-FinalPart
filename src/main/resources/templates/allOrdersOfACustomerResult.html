@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>All orders Of a customer</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+<div align="center">
+    <h2>All orders Of a customer</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Order Status</th>
+            <th>Payed</th>
+            <th>Order Accepted</th>
+            <th>Work description</th>
+            <th>Suggested price</th>
+            <th>SubService Id</th>
+            <th>SubService description</th>
+        </tr>
+        <tr th:each="order : ${orders}">
+            <td class="align-middle" th:text="${order.id}"></td>
+            <td class="align-middle" th:text="${order.orderStatus}"></td>
+            <td class="align-middle" th:text="${order.payed}"></td>
+            <td class="align-middle" th:text="${order.accepted}"></td>
+            <td class="align-middle" th:text="${order.workDescription}"></td>
+            <td class="align-middle" th:text="${order.suggestedPrice}"></td>
+            <td class="align-middle" th:text="${order.subService.id}"></td>
+            <td class="align-middle" th:text="${order.subService.description}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

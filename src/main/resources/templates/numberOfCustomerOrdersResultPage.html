@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Users Search</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+<body>
+<div align="center">
+    <h2>Result of Users search</h2>
+    <table>
+        <tr>
+            <th>Number of orders</th>
+        </tr>
+        <tr th:each="numbers : ${number}">
+            <td class="align-middle" th:text="${numbers.ordersNumber}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Admin Menu</title>
+</head>
+<body>
+<div align="center">
+    <h2>Admin Menu</h2>
+    <a th:href="@{/Service/serviceRegister}"> Save a Services </a><br><br>
+    <a th:href="@{/subService/subServiceRegister}"> Save a subServices </a><br><br>
+    <a th:href="@{/users/gridSearch}"> Users gridSearch</a><br><br>
+    <a th:href="@{/subService/takeASubService}"> take a subService for an Expert </a><br><br>
+    <a th:href="@{/order/customerOrder}"> All orders of a customer </a><br><br>
+    <a th:href="@{/users/allAwaitingApprovalUsers}"> all AwaitingApproval users </a><br><br>
+    <a th:href="@{/users/acceptUser}"> accept a user </a><br><br>
+    <a th:href="@{/users/signUpTime}"> all Users By SignUp time </a><br><br>
+    <a th:href="@{/order/numberOfCustomerOrder}"> Orders registered by a customer </a><br><br>
+    <a th:href="@{/comment/findAll}"> all Comments of a customer </a><br><br>
+    <a th:href="@{/role/save}"> Save new role </a><br><br>
+    <a th:href="@{/logout}"> ****Logout**** </a><br><br>
+
+</div>
+</body>
+</html>

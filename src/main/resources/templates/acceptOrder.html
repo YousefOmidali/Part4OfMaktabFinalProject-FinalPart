@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Comment Registration</title>
+</head>
+<body>
+<div align="center">
+    <h2>accept suggestion registration</h2>
+    <form action="#" th:action="@{/order/acceptOrder}" th:object="${order}" method="post">
+        <label>order Id: </label>
+        <input type="number" th:field="*{id}"/><br><br>
+
+        <button type="submit">Accept The Order</button>
+    </form>
+</div>
+</body>
+</html>

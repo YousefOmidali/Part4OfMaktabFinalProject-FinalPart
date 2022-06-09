@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>customer Menu</title>
+</head>
+<body>
+<div align="center">
+    <h2>Customer Menu</h2>
+    <a th:href="@{/subService/findAll}"> All subServices </a><br><br>
+    <a th:href="@{/Service/findAll}"> All Services </a><br><br>
+    <a th:href="@{/order/saveOrder}"> New Order </a><br><br>
+    <a th:href="@{/order/customerOrder}"> All My Orders </a><br><br>
+    <a th:href="@{/order/acceptOrder}">Accept Order </a><br><br>
+    <a th:href="@{/suggestion/ofAnOrder}">Suggestion Of an Order (show if OrderStatus is:
+        "WaitingForCustomerToChooseASuggestion") </a><br><br>
+    <a th:href="@{/wallet/save}">Charge Wallet </a><br><br>
+    <a th:href="@{/comment/save}">new comment </a><br><br>
+    <a th:href="@{/comment/findAll}">all my comments </a><br><br>
+    <a th:href="@{/order/customerMustPayOrders}">orders I Have not pay ! </a><br><br>
+    <a th:href="@{/users/payOrder}">pay for an order by wallet </a><br><br>
+    <a th:href="@{/users/payOrderByCard}">pay for an order by credit card </a><br><br>
+    <a th:href="@{/logout}"> ****Logout**** </a><br><br>
+
+
+</div>
+</body>
+</html>

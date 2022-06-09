@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User Registration</title>
+</head>
+<body>
+<div align="center">
+    <h2>Suggestion Registration</h2>
+    <form action="#" th:action="@{/suggestion/save}" th:object="${suggestion}" method="post">
+        <label>Order Id: </label>
+        <input type="number" th:field="*{order.id}"/><br><br>
+        <label>Expert Id: </label>
+        <input type="number" th:field="*{users.id}"/><br><br>
+        <label>WorkStart Date: </label>
+        <input type="text" th:field="*{workStartDate}"/><br><br>
+        <label>Work Time: </label>
+        <input type="text" th:field="*{workTime}"/><br><br>
+        <label>Suggested Price: </label>
+        <input type="number" th:field="*{suggestedPrice}"/><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>

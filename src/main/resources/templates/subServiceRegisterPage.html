@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>SubService Registration</title>
+</head>
+<body>
+<div align="center">
+    <h2>SubService Registration</h2>
+    <form action="#" th:action="@{/subService/subServiceRegister}" th:object="${subService}" method="post">
+
+        <label>Description: </label>
+        <input type="text" th:field="*{description}"/><br><br>
+        <label>Base Price: </label>
+        <input type="number" th:field="*{basePrice}"/><br><br>
+        <label>Service Id: </label>
+        <input type="number" th:field="*{service.id}"/><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>

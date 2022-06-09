@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>All Finished orders of customer</title>
+</head>
+<body>
+<div align="center">
+    <h2>All Finished orders of customer</h2>
+    <form action="#" th:action="@{/order/customerMustPayOrders}" th:object="${users}" method="post">
+        <label>Customer Id: </label>
+        <input type="number" th:field="*{id}"/><br><br>
+
+        <button type="submit">Search</button>
+    </form>
+</div>
+</body>
+</html>

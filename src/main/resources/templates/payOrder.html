@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Pay for Order</title>
+</head>
+<body>
+<div align="center">
+    <h2>Pay for Order</h2>
+    <form action="#" th:action="@{/users/payOrder}" th:object="${payForOrder}" method="post">
+        <label>Customer Id: </label>
+        <input type="text" th:field="*{customerId}"/><br><br>
+        <label>Order Id: </label>
+        <input type="text" th:field="*{orderId}"/><br><br>
+        <label>Amount: </label>
+        <input type="number" th:field="*{amount}"/><br><br>
+        <label>Expert Id: </label>
+        <input type="number" th:field="*{expertId}"/><br><br>
+
+        <button type="submit">Pay</button>
+    </form>
+</div>
+</body>
+</html>
